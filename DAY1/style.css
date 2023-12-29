@@ -1,0 +1,204 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/* Color Variables */
+:root {
+    --blue: #2562d1;
+    --green: #216929;
+    --purple: #ac25c7;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+    }
+}
+
+/* Navigation Styles */
+nav {
+    flex: 1;
+    position: relative;
+    transition: flex 0.5s linear;
+    
+
+    &:hover,
+    &:active,
+    &:focus {
+        flex: 3;
+        background-color: rgb(0, 0, 0);
+    }
+}
+
+.color {
+    background-color: var(--blue);
+}
+
+.color1 {
+    background-color: var(--green);
+}
+
+.color2 {
+    background-color: var(--purple);
+}
+
+/* Navigation Hover Styles */
+nav:hover h3,
+nav:active h3,
+nav:focus h3 {
+    transform: translate(-50%, -50%) rotate(0);
+    color: aliceblue;
+    animation: none;
+    transition: all 0.5s linear;
+}
+
+/* Responsive Navigation Hover Styles */
+@media screen and (min-width: 768px) {
+    nav:hover h3,
+    nav:active h3,
+    nav:focus h3 {
+        transform: translate(-50%, -50%) scale(1.25);
+    }
+}
+
+/* Heading Styles */
+h3 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 5rem;
+    left: 50%;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation: colorChange 6s infinite;
+}
+
+@keyframes colorChange {
+    0% {
+        color: rgb(231, 12, 12);
+    }
+    50% {
+        color: rgb(255, 255, 255);
+    }
+    100% {
+        color: rgb(252, 255, 60);
+    }
+}
+
+/* Responsive Heading Styles */
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/* Color Variables */
+:root {
+    --blue: #2562d1;
+    --green: #216929;
+    --purple: #ac25c7;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+    }
+}
+
+/* Navigation Styles */
+nav {
+    flex: 1;
+    position: relative;
+    transition: flex 0.5s linear;
+    
+
+    &:hover,
+    &:active,
+    &:focus {
+        flex: 3;
+        background-color: rgb(0, 0, 0);
+    }
+}
+
+.color {
+    background-color: var(--blue);
+}
+
+.color1 {
+    background-color: var(--green);
+}
+
+.color2 {
+    background-color: var(--purple);
+}
+
+/* Navigation Hover Styles */
+nav:hover h3,
+nav:active h3,
+nav:focus h3 {
+    transform: translate(-50%, -50%) rotate(0);
+    color: aliceblue;
+    animation: none;
+    transition: all 0.5s linear;
+}
+
+/* Responsive Navigation Hover Styles */
+@media screen and (min-width: 768px) {
+    nav:hover h3,
+    nav:active h3,
+    nav:focus h3 {
+        transform: translate(-50%, -50%) scale(1.25);
+    }
+}
+
+/* Heading Styles */
+h3 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 5rem;
+    left: 50%;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation: colorChange 6s infinite;
+}
+
+@keyframes colorChange {
+    0% {
+        color: rgb(231, 12, 12);
+    }
+    50% {
+        color: rgb(255, 255, 255);
+    }
+    75% {
+        color: rgb(252, 255, 60);
+    }
+    100% {
+        color: rgb(61, 61, 61);
+    }
+}
+
+/* Responsive Heading Styles */
+@media screen and (min-width: 768px) {
+    h3 {
+        transform: translate(-50%, -50%) rotate(90deg);
+    }
+}
