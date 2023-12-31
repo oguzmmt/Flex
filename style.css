@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    background: linear-gradient(to right bottom, rgb(113, 175, 177) 0%, rgba(152, 225, 186, 1) 100%);
+    height: 100vh;
+    width: 100%;
+}
+
+/* HEADER STARTTTTT */
+header {
+    display: flex;
+    width: 100%;
+    height: 80px;
+    border-bottom: 1px solid rgb(97, 97, 97);
+}
+
+header .animation {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    border-top: 2px solid black;
+    margin: 10px 0 0 10px;
+    animation: moveAndRotate 3s infinite linear;
+}
+
+@keyframes moveAndRotate {
+    0% {
+        transform: translate(0deg) skew(0deg, 0deg);
+        border-color: aliceblue;
+    }
+    50% {
+        transform: translate(250px) rotate(180deg) skew(7deg, 7deg);
+        border-color: rgb(255, 230, 0);
+    }
+    75% {
+        transform: translate(50px) rotate(-180deg) skew(15deg, -5deg);
+        border-color: rgb(0, 255, 85);
+    }
+    100% {
+        transform: translate(500px) rotate(360deg);
+        border-color: bisque;
+    }
+}
+
+header nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    margin-right: 35px;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 15px;
+}
+
+header nav ul li a {
+    color: aliceblue;
+    font-size: 20px;
+    font-weight: bold;
+    animation: animation 3s 10 linear;
+}
+
+@keyframes animation {
+    to {
+        text-shadow: -1px 4px 3px rgba(255, 0, 0, 0.3);
+    }
+}
+
+/* Header Responsive tasarım */
+@media only screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        height: auto;
+    }
+
+    header .animation {
+        animation: none;
+        border: none;
+        position: absolute;
+    }
+
+    header nav {
+        display: flex;
+        justify-content: center;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+}
+
+/* Header ENDDDDDDDDDDDDDDDDDDDD */
+
+/* MAİNNNNNN STARTTTTTTTT */
+main {
+    display: flex;
+    margin-top: 10px;
+}
+
+main .about {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 50%;
+ 
+}
+
+main .about h1 {
+    align-items: center;
+    justify-content: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 15px;
+}
+
+main .about p {
+    padding-left: 20px;
+    font-weight: bolder;
+    font-size: 15px;
+    color: rgb(102, 102, 102);
+}
+
+/* ANİMASYONNNNNNNNNN */
+main .loader {
+    width: 50%;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: perspective(450px) rotateX(120deg);
+}
+
+main .loader span {
+    margin: auto;
+    width: 50%;
+    position: absolute;
+    border: 3px solid #ff0000;
+    box-shadow: 0 2px 0 #ff0000, inset 2px 0 #ccc;
+    border-radius: 50%;
+    animation: animatee 3s ease-in-out infinite;
+}
+
+
+@keyframes animatee {
+    0%, 100% {
+        transform: translateZ(-100px);
+    }
+    50% {
+        transform: translateZ(100px);
+    }
+}
+
+.loader span:nth-child(1){
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    animation-delay: 1.1s;
+    
+}
+.loader span:nth-child(2){
+    top:10px;
+    left: 10px;
+    bottom: 10px;
+    right: 10px;
+    animation-delay: 1.2s;
+}
+.loader span:nth-child(3){
+    top:20px;
+    left: 20px;
+    bottom: 20px;
+    right: 20px;
+    animation-delay: 1.3s;
+}
+.loader span:nth-child(4){
+    top:30px;
+    left: 30px;
+    bottom: 30px;
+    right: 30px;
+    animation-delay: 1.4s;
+}
+.loader span:nth-child(5){
+    top:40px;
+    left:40px;
+    bottom:40px;
+    right:40px;
+    animation-delay: 1.5s;
+}
+
+/* ANİMASYONNNNNNNNNN  enddddddddd*/
+
+
+
+/* PROJECTTTTTTTTTTTTTTT STARTTTTT */
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 15px;
+    width: 100%;
+}
+
+section h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    width: 100%;
+    color: chocolate;
+}
+
+section .box,
+section .box1,
+section .box2 {
+    width: calc(33.33% - 20px); 
+    height: 200px;
+    margin: 10px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+}
+/* projecttt endddddddddd */
+
+/* CONTACT STARTTTTTTTTTTTTTT */
+
+.contact {
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    font-size: 50px;
+}
